@@ -25,28 +25,29 @@ document.getElementById("planets").innerHTML = option;
 
 function calculateWeight(weight, planetName) {
   // 2. Write the code to return the correct weight
-  // let newWeight = 0;
-  for (var i = 0; i < planets.length; i++) {   
+  for (var i = 0; i < planets.length; i++) {
     if (planetName == planets[i][0]) {
       var newGravity = planets[i][1];
     }
-    return weight * newGravity;
   }
-};
+  return weight * newGravity;
+}
 
 function handleClickEvent(e) {
   // 3. Create a variable called userWeight and assign the value of the user's weight.
-  let userWeight = document.getElementById("user-weight").value;
+  var userWeight = document.getElementById("user-weight").value;
   // 4. Create a variable called planetName and assign the name of the selected
   //    planet from the drop down.
-  let planetName = document.getElementById("planets").selectedIndex;
+  var planetName = document.getElementById("planets").value;
   // 5. Create a variable called result and assign the value of the new calculated weight.
-  let result = calculateWeight(weight, planetName);
+  var result = calculateWeight(userWeight, planetName);
   // 6. Write code to display the message shown in the screenshot.
-  document.getElementById('output') = innerHTML = `If you were on ${planetName}, you would weigh ${result}`;
+  document.getElementById(
+    "output"
+  ).innerHTML = `If you were on ${planetName}, you would weigh ${result}lbs!`;
 }
 // 7. Set the #calculate-button element's onclick method to use the handleClickEvent function.
-document.getElementById('calculate-button').onclick = handleClickEvent(e);
+
 // Bonus Challenges
 // 8. Reverse the drop down order so that the sun is first.
 // 9. Make it look nice using bootstrap (http://getbootstrap.com/getting-started/)
