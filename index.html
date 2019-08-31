@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Astro Weight Calculator</title>
-  </head>
 
-  <body>
-    <!-- Write your markup here  -->
-    <div>
-      <input id="user-weight" type="text" placeholder="Weight (lbs)" />
+<head>
+
+  <title>Astro Weight Calculator</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <style>
+    body {
+      background-image: url("backgroundimg.jpg");
+      margin-top: 150px;
+      margin-left: 350px;
+      margin-right: 350px;
+      background-color: black;
+    }
+
+    h1 {
+      font-family: 'Abril Fatface';
+      text-shadow: 4px 4px 4px black;
+    }
+
+    p {
+      font-size: 20px;
+      text-shadow: 4px 4px 4px black;
+    }
+  </style>
+  <div class="container">
+    <div class="white-text">
+      <center>
+        <h1>Astro Weight Calculator</h1>
+      </center>
     </div>
-    <div>
-      <select name="planets" id="planets"></select>
-    </div>
-    <div>
-      <p id="output"></p>
-    </div>
-    <div>
-      <button id="calculate-button" onclick="handleClickEvent()">
+
+    <form>
+      <div class="input-field">
+        <label class="active white-text">Weight (lbs)</label>
+        <input class="white-text z-depth-5" id="user-weight" type="number" />
+      </div>
+    </form>
+
+    <select class="browser-default" name="planets" id="planets"></select>
+    <br>
+    <center><button class='hoverable orange' id="calculate-button" onclick="handleClickEvent()">
         Calculate
-      </button>
-    </div>
+      </button></center>
 
+    <center>
+      <p class='white-text' id="output"></p>
+    </center>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="main.js" charset="utf-8"></script>
-  </body>
+</body>
+
 </html>
